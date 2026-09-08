@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Coco & Date, a Bahraini and Sri Lankan cafe experience in Galle Fort.">
   <meta name="theme-color" content="#17130f">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coco & Date | Galle Fort">
+  <meta property="og:description" content="Bahraini soul. Sri Lankan roots. A cafe experience in Galle Fort.">
+  <meta property="og:url" content="https://alphaoshyy.github.io/coco-date-website/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://alphaoshyy.github.io/coco-date-website/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>Coco & Date | Galle Fort</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,21 +20,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="grain" aria-hidden="true"></div>
   <header class="nav-wrap">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Coco and Date home">COCO <span>&</span> DATE</a>
-      <div class="nav-links">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <div class="nav-links" id="site-nav">
         <a href="#story">Story</a>
         <a href="#menu">Menu</a>
         <a href="#visit">Visit</a>
       </div>
-      <a class="nav-cta" href="https://www.instagram.com/cocoanddate/" target="_blank" rel="noreferrer">Instagram ↗</a>
+      <a class="nav-cta" href="https://www.instagram.com/cocoanddate/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero container">
+  <main id="main-content">
+    <section class="hero container" id="top">
       <div class="hero-copy reveal">
         <p class="eyebrow">GALLE FORT · SRI LANKA</p>
         <h1>Bahraini soul.<br><em>Sri Lankan roots.</em></h1>
@@ -36,10 +46,10 @@
           <a class="text-link" href="#visit">Find us <span>↗</span></a>
         </div>
       </div>
-      <div class="hero-art reveal delay-1" aria-label="Coco and Date visual placeholder">
+      <div class="hero-art reveal delay-1" role="img" aria-label="Editorial Coco and Date illustration inspired by Galle Fort, dates and warm Mediterranean architecture">
         <div class="sun"></div>
         <div class="arch arch-back"></div>
-        <div class="arch arch-front"><span>COCO<br>&<br>DATE</span></div>
+        <div class="arch arch-front"><span>COCO<br>&amp;<br>DATE</span></div>
         <div class="date-shape date-one"></div>
         <div class="date-shape date-two"></div>
         <div class="hero-note">53/1 CHURCH ST<br>GALLE FORT</div>
@@ -51,7 +61,7 @@
       <div class="story-grid">
         <h2 class="reveal">A little corner<br><em>between cultures.</em></h2>
         <div class="story-copy reveal delay-1">
-          <p>Coco & Date brings a piece of Bahrain into the lanes of Galle Fort, with Sri Lankan ingredients, Middle Eastern influences and a menu built around stories.</p>
+          <p>Coco &amp; Date brings a piece of Bahrain into the lanes of Galle Fort, with Sri Lankan ingredients, Middle Eastern influences and a menu built around stories.</p>
           <p>From Ceylon tea with Persian saffron to dates sourced from Bahrain, every detail has a reason to be here.</p>
           <span class="signature">Fatema · Galle Fort</span>
         </div>
@@ -66,19 +76,12 @@
           <p class="reveal delay-1">A light, fresh menu inspired by Bahrain, Sri Lanka and everywhere in between.</p>
         </div>
         <div class="menu-grid">
-          <article class="menu-card reveal">
-            <span>01</span><h3>Leaves of Persia</h3><p>Ceylon tea, Persian saffron and a fragrant finish.</p>
-          </article>
-          <article class="menu-card featured reveal delay-1">
-            <span>02</span><h3>Stuffed Dates</h3><p>Premium dates from Bahrain, made for slow mornings.</p>
-          </article>
-          <article class="menu-card reveal delay-2">
-            <span>03</span><h3>Acai Bowls</h3><p>Fresh, colourful bowls for bright Galle mornings.</p>
-          </article>
-          <article class="menu-card reveal">
-            <span>04</span><h3>Breakfast & Brunch</h3><p>Thoughtful plates, coffee and small things worth staying for.</p>
-          </article>
+          <article class="menu-card reveal"><span>01</span><h3>Leaves of Persia</h3><p>Ceylon tea, Persian saffron and a fragrant finish.</p></article>
+          <article class="menu-card featured reveal delay-1"><span>02</span><h3>Stuffed Dates</h3><p>Premium dates from Bahrain, made for slow mornings.</p></article>
+          <article class="menu-card reveal delay-2"><span>03</span><h3>Acai Bowls</h3><p>Fresh, colourful bowls for bright Galle mornings.</p></article>
+          <article class="menu-card reveal"><span>04</span><h3>Breakfast &amp; Brunch</h3><p>Thoughtful plates, coffee and small things worth staying for.</p></article>
         </div>
+        <p class="menu-note">Menu items and descriptions shown as a concept. Confirm final menu with the cafe before launch.</p>
       </div>
     </section>
 
@@ -94,20 +97,23 @@
         <div class="visit-copy reveal">
           <h2>Find us<br><em>inside the Fort.</em></h2>
           <p>Follow Church Street into one of Galle Fort’s quieter corners. Come for breakfast, stay for the stories.</p>
-          <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Coco%20And%20Date%2C%2053%2F1%20Church%20St%2C%20Galle" target="_blank" rel="noreferrer">Open in Maps ↗</a>
+          <div class="visit-actions">
+            <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Coco%20And%20Date%2C%2053%2F1%20Church%20St%2C%20Galle" target="_blank" rel="noopener noreferrer">Open in Maps ↗</a>
+            <a class="text-link" href="tel:+94711346460">Call the cafe</a>
+          </div>
         </div>
         <div class="visit-card reveal delay-1">
           <div><span>ADDRESS</span><strong>53/1 Church St<br>Galle 80000, Sri Lanka</strong></div>
           <div><span>PHONE</span><a href="tel:+94711346460">+94 71 134 6460</a></div>
           <div><span>HOURS</span><strong>08:30 — 18:00</strong><small>Hours to be confirmed with the cafe.</small></div>
-          <div><span>FOLLOW</span><a href="https://www.instagram.com/cocoanddate/" target="_blank" rel="noreferrer">@cocoanddate ↗</a></div>
+          <div><span>FOLLOW</span><a href="https://www.instagram.com/cocoanddate/" target="_blank" rel="noopener noreferrer">@cocoanddate ↗</a></div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer container">
-    <div class="brand">COCO <span>&</span> DATE</div>
+    <div class="brand">COCO <span>&amp;</span> DATE</div>
     <p>Galle Fort · Sri Lanka</p>
     <p class="footer-note">Website concept by NOVA</p>
   </footer>
