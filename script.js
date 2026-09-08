@@ -2,6 +2,8 @@ const revealItems = document.querySelectorAll('.reveal');
 const nav = document.querySelector('.nav-wrap');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const menuTabs = document.querySelectorAll('.menu-tab');
+const menuCards = document.querySelectorAll('.menu-card');
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries, obs) => {
@@ -17,9 +19,12 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach(item => item.classList.add('visible'));
 }
 
-window.addEventListener('scroll', () => {
+const updateNav = () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
+};
+
+updateNav();
+window.addEventListener('scroll', updateNav, { passive: true });
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
@@ -36,3 +41,20 @@ if (menuToggle && navLinks) {
     });
   });
 }
+
+menuTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const filter = tab.dataset.filter;
+
+    menuTabs.forEach(item => {
+      const active = item === tab;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-selected', String(active));
+    });
+
+    menuCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !show);
+    });
+  });
+});
